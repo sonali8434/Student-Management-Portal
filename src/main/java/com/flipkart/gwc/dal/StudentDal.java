@@ -9,12 +9,11 @@ public class StudentDal {
     private Map<Long, Student> students = new HashMap<>();
     private long currentId = 1;
 
-    public Student save(Student student) {
+    public void save(Student student) {
         if (student.getId() == null) {
             student.setId(currentId++);
         }
         students.put(student.getId(), student);
-        return student;
     }
 
     public Student findById(Long id) {
