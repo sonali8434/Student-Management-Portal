@@ -7,9 +7,4 @@ public class StudentService {
     public StudentService(StudentDal studentDal) {
         this.studentDal = studentDal;
     }
-    public int getMarks(String studentId){
-        return studentDal.getStudentMarks(studentId);
-
-    }
-
 }
