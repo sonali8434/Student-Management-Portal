@@ -1,35 +1,34 @@
 package com.flipkart.gwc.model;
 
 public class Mark {
-    private Long id;
-    private Student student;
-    private Course course;
+    private Long studentId;
+    private Long courseId;
     private Integer mark;
 
-    // Getters and setters
-    public Long getId() {
-        return id;
+    // Constructors, getters, and setters
+    public Mark() {}
+
+    public Long getStudentId() {
+        return studentId;
     }
-    public void setId(Long id) {
-        this.id = id;
+
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
     }
-    public Student getStudent() {
-        return student;
+
+    public Long getCourseId() {
+        return courseId;
     }
-    public void setStudent(Student student) {
-        this.student = student;
+
+    public void setCourseId(Long courseId) {
+        this.courseId = courseId;
     }
-    public Course getCourse() {
-        return course;
-    }
-    public void setCourse(Course course) {
-        this.course = course;
-    }
+
     public Integer getMark() {
         return mark;
     }
+
     public void setMark(Integer mark) {
         this.mark = mark;
     }
 }
-

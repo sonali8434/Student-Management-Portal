@@ -1,33 +1,33 @@
 package com.flipkart.gwc.model;
 
 public class Enrollment {
-    private Long id;
-    private Student student;
-    private Course course;
+    private Long studentId;
+    private Long courseId;
     private String status;
 
-    // Getters and setters
-    public Long getId() {
-        return id;
+    // Constructors, getters, and setters
+    public Enrollment() {}
+
+    public Long getStudentId() {
+        return studentId;
     }
-    public void setId(Long id) {
-        this.id = id;
+
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
     }
-    public Student getStudent() {
-        return student;
+
+    public Long getCourseId() {
+        return courseId;
     }
-    public void setStudent(Student student) {
-        this.student = student;
+
+    public void setCourseId(Long courseId) {
+        this.courseId = courseId;
     }
-    public Course getCourse() {
-        return course;
-    }
-    public void setCourse(Course course) {
-        this.course = course;
-    }
+
     public String getStatus() {
         return status;
     }
+
     public void setStatus(String status) {
         this.status = status;
     }
