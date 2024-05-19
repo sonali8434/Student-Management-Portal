@@ -14,6 +14,7 @@ public class StudentService {
     public StudentService(StudentDal studentDal) {
         this.studentDal = studentDal;
     }
+<<<<<<< HEAD
 
     public Student createStudent(Student student) {
         return studentDal.create(student);
@@ -68,4 +69,6 @@ public class StudentService {
     public List<Mark> viewMarks(Long studentId) {
         return studentDal.findMarksByStudentId(studentId);
     }
+=======
+>>>>>>> 2d9200435444d8f1f7c2fad5089aa5bc91a67782
 }

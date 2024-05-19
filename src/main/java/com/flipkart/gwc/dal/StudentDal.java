@@ -2,6 +2,7 @@ package com.flipkart.gwc.dal;
 
 import com.flipkart.gwc.model.Student;
 
+<<<<<<< HEAD
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -66,5 +67,31 @@ public class StudentDal {
         student.setEmail(resultSet.getString("email"));
         student.setDepartment(resultSet.getString("department"));
         return student;
+=======
+import java.util.HashMap;
+import java.util.Map;
+
+public class StudentDal {
+    private Map<Long, Student> students = new HashMap<>();
+    private long currentId = 1;
+
+    public void save(Student student) {
+        if (student.getId() == null) {
+            student.setId(currentId++);
+        }
+        students.put(student.getId(), student);
+    }
+
+    public Student findById(Long id) {
+        return students.get(id);
+    }
+
+    public void deleteById(Long id) {
+        students.remove(id);
+    }
+
+    public Map<Long, Student> findAll() {
+        return students;
+>>>>>>> 2d9200435444d8f1f7c2fad5089aa5bc91a67782
     }
 }
