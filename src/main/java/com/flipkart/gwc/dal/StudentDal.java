@@ -15,7 +15,14 @@ public class StudentDal {
         }
         students.put(student.getId(), student);
     }
-
+    //Add Student
+    public void addStudent(Student student) {
+        students.put(student.getId(), student);
+    }
+    //Delete Student
+    public void deleteStudent(long studentId) {
+        students.remove(studentId);
+    }
     public Student findById(Long id) {
         return students.get(id);
     }

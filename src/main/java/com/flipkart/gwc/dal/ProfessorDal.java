@@ -19,7 +19,14 @@ public class ProfessorDal {
     public Professor findById(Long id) {
         return professors.get(id);
     }
-
+    //Add professor
+    public void addProfessor(Professor professor) {
+        professors.put(professor.getId(), professor);
+    }
+    //Deleting professor
+    public void deleteProfessor(long professorId) {
+        professors.remove(professorId);
+    }
     public void deleteById(Long id) {
         professors.remove(id);
     }

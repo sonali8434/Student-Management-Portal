@@ -16,6 +16,14 @@ public class CourseDal {
         courses.put(course.getId(), course);
         return course;
     }
+    public void deleteCourse(long id) {
+        courses.remove(id);
+    }
+
+
+    public void updateCourse(Course course) {
+        courses.put(course.getId(), course);
+    }
 
     public Course findById(Long id) {
         return courses.get(id);

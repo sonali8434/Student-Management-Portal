@@ -5,6 +5,7 @@ public class Request {
     private Student student;
     private Course course;
     private String status; // "PENDING", "APPROVED", "REJECTED"
+    private Professor professor;
 
     // Getters and setters
     public Long getId() {
@@ -31,4 +32,6 @@ public class Request {
     public void setStatus(String status) {
         this.status = status;
     }
+    public Professor getProfessor() { return professor; }
+    public void setProfessor(Professor professor) { this.professor = professor; }
 }
