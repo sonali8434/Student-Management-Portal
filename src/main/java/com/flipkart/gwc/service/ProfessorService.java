@@ -5,6 +5,7 @@ import com.flipkart.gwc.model.Course;
 import com.flipkart.gwc.model.Request;
 import com.flipkart.gwc.model.Student;
 
+import java.sql.SQLException;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -68,7 +69,7 @@ public class ProfessorService {
         return null;
     }
 
-    public void addStudentToCourse(Long studentId, Long courseId) {
+    public void addStudentToCourse(Long studentId, Long courseId) throws SQLException {
         Course course = courseDal.findById(courseId);
         Student student = studentDal.findById(studentId);
 
@@ -78,7 +79,7 @@ public class ProfessorService {
         }
     }
 
-    public void removeStudentFromCourse(Long studentId, Long courseId) {
+    public void removeStudentFromCourse(Long studentId, Long courseId) throws SQLException {
         Course course = courseDal.findById(courseId);
         Student student = studentDal.findById(studentId);
 
