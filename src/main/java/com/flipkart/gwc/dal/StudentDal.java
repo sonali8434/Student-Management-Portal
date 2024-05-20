@@ -1,19 +1,21 @@
 package com.flipkart.gwc.dal;
 
-import com.flipkart.gwc.model.Course;
-import com.flipkart.gwc.model.Enrollment;
-import com.flipkart.gwc.model.Mark;
 import com.flipkart.gwc.model.Student;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import static java.lang.Character.getName;
+import static sun.security.pkcs11.wrapper.Functions.getId;
 
 public class StudentDal {
     private Connection connection;
+    private Map<Long, Student> students;
 
     // Constructor to initialize database connection
-    public StudentDal(Connection connection) {
+    public StudentDal() {
         this.connection = connection;
     }
 
@@ -69,6 +71,10 @@ public class StudentDal {
         student.setEmail(resultSet.getString("email"));
         student.setDepartment(resultSet.getString("department"));
         return student;
+    }
+
+    public void deleteStudent(Long id) {
+        students.remove(id);
     }
 
 }

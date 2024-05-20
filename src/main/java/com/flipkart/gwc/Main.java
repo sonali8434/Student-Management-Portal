@@ -8,8 +8,10 @@ import com.flipkart.gwc.model.Course;
 import com.flipkart.gwc.service.AdminService;
 import com.flipkart.gwc.service.ProfessorService;
 
+import java.sql.SQLException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         CourseDal courseDal = new CourseDal();
         RequestDal requestDal = new RequestDal();
         MarksheetDal marksheetDal = new MarksheetDal();
@@ -21,7 +23,7 @@ public class Main {
         Student std = new Student();
         std.setName("Student1");
         std.setEmail("studentemail@gmail.com");
-        studentDal.addStudent(std);
+        studentDal.create(std);
         // Delete a student
         studentDal.deleteStudent(std.getId());
         // Adding a professor
@@ -56,9 +58,6 @@ public class Main {
 
 
         Student student = new Student();
-        student.setName("Student1");
-        student.setEmail("studentemail@gmail.com");
-        studentDal.save(student);
         //Update a course
         Course updatedCourse = new Course();
         updatedCourse.setId(course.getId());

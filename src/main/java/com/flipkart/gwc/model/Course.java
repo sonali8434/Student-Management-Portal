@@ -62,4 +62,16 @@ public class Course {
     public void setStudents(Set<Student> students) {
         this.students = students;
     }
+
+    public void setCourseName(String javaProgramming) {
+        this.name=name;
+    }
+
+    public void setCourseDescription(String s) {
+        this.description=description;
+    }
+
+    public String getCourseName() {
+    return name;
+    }
 }
